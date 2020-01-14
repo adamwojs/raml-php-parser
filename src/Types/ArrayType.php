@@ -127,7 +127,7 @@ class ArrayType extends Type
     public function getItems()
     {
         if (!($this->items instanceof TypeInterface)) {
-            $this->items = TypeCollection::getInstance()->getTypeByName($this->items);
+            $this->items = ApiDefinition::determineType($this->items, $this->getDefinition());
         }
 
         return $this->items;
