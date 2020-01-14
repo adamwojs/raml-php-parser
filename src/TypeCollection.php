@@ -135,7 +135,7 @@ class TypeCollection implements \Iterator
             }
         }
 
-        throw new \RuntimeException(\sprintf('No type found for name %s, list: %s', \var_export($name, true), \var_export($this->collection, true)));
+        throw new \RuntimeException(\sprintf('No type found for name %s', \var_export($name, true)));
     }
 
     /**
